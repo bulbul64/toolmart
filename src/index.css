@@ -1,0 +1,10 @@
+*{
+    font-family: "Manrope", sans-serif;
+}
+
+.custom-btn-primary{
+    @apply bg-[#841DF9]
+}
+.custom-text-primary{
+    @apply text-[#841DF9]
+}
