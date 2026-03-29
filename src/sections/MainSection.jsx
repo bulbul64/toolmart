@@ -1,10 +1,10 @@
 
-import CartItem from '../components/CartItem/CartItem'
 
-export default function MainSection() {
-  return (
-      <>
-         <CartItem /> 
-    </>
-  )
-}
+
+// export default function MainSection() {
+//   return (
+//     <>
+//       <h1>Main Section</h1>
+//     </>
+//   );
+// }
