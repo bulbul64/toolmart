@@ -1,0 +1,72 @@
+import { cn } from '@/lib/utils';
+import { Button } from '../components/ui/button';
+import ProductCard from '../components/products/ProductCard';
+import DataFetcher from '../api/api';
+import { Spinner } from '../components/ui/spinner';
+import { useState } from 'react';
+
+export default function ProductsSection() {
+  const { products, loading } = DataFetcher();
+  const [toggleBtn, setToggleBtn] = useState('products');
+
+  if (loading) {
+    return (
+      <div className='py-8 flex justify-center'>
+        <Button
+          variant='outline'
+          disabled
+          size='sm'
+        >
+          <Spinner />
+          Please wait
+        </Button>
+      </div>
+    );
+  }
+
+  const heading = 'Premium Digital Tools';
+  const description =
+    'Choose from our curated collection of premium digital products designed to boost your productivity and creativity.';
+
+  return (
+    <section className={cn('py-20 lg:py-24')}>
+      <div className='container mx-auto px-4 text-center'>
+        <h2 className='text-3xl md:text-4xl font-extrabold mb-6'>{heading}</h2>
+        <p className='text-lg w-2/3 mx-auto text-gray-600 mt-2'>{description}</p>
+      </div>
+
+      {/* Toggle Buttons */}
+      <div className='flex justify-center gap-6 mb-8 mt-6'>
+        <Button
+          onClick={() => setToggleBtn('products')}
+          className={cn(
+            'cursor-pointer py-2 px-6',
+            toggleBtn === 'products' ? 'bg-black text-white' : 'bg-white text-black',
+          )}
+        >
+          Products
+        </Button>
+        <Button
+          onClick={() => setToggleBtn('cart')}
+          className={cn(
+            'cursor-pointer py-2 px-6',
+            toggleBtn === 'cart' ? 'bg-black text-white' : 'bg-white text-black',
+          )}
+        >
+          Cart <span>(2)</span>
+        </Button>
+      </div>
+
+      {/* Product Grid */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            loading={loading}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}

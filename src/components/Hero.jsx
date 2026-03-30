@@ -13,37 +13,37 @@ software—all in one place. Start creating faster today.
 Explore Products.`,
   buttons = {
     primary: {
-      text: 'Discover all components',
+      text: 'Explore Products',
       url: 'https://www.shadcnblocks.com',
     },
     secondary: {
-      text: 'View on GitHub',
+      text: 'Watch Demo',
       url: 'https://www.shadcnblocks.com',
     },
   },
   className,
 }) => {
   return (
-    <section className={cn('py-32', className)}>
+    <section className={cn('py-32 lg:py-40', className)}>
       <div className='container'>
-        <div className='grid items-center gap-6 lg:grid-cols-2 lg:gap-12'>
+        <div className='grid items-center gap-8 lg:grid-cols-2 lg:gap-12'>
           {/* Left Content */}
-          <div className='flex flex-col items-center gap-5 text-center lg:items-start lg:text-left'>
+          <div className='flex flex-col items-center gap-4 text-center lg:items-start lg:text-left'>
             {/* Badge with dot */}
             <Badge
               variant='outline'
-              className='flex items-center gap-2'
+              className='flex items-center gap-3'
             >
               <div className='h-2 w-2 rounded-full bg-amber-500'></div>
               {badge}
             </Badge>
 
-            <h1 className='text-4xl font-bold text-pretty lg:text-6xl'>{heading}</h1>
+            <h1 className='text-4xl font-bold text-pretty lg:text-6xl mt-4 lg:mt-6'>{heading}</h1>
 
-            <p className='max-w-xl text-muted-foreground lg:text-xl'>{description}</p>
+            <p className='max-w-xl text-muted-foreground lg:text-xl mt-3 lg:mt-4'>{description}</p>
 
             {/* Buttons */}
-            <div className='flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start'>
+            <div className='flex w-full flex-col sm:flex-row gap-3 sm:gap-4 mt-5 lg:mt-6 justify-center lg:justify-start'>
               {buttons.primary && (
                 <Button
                   asChild
@@ -58,9 +58,12 @@ Explore Products.`,
                   variant='outline'
                   className='w-full sm:w-auto'
                 >
-                  <a href={buttons.secondary.url}>
+                  <a
+                    href={buttons.secondary.url}
+                    className='flex items-center gap-2'
+                  >
                     {buttons.secondary.text}
-                    <ArrowRight className='size-4' />
+                    <ArrowRight size={20} />
                   </a>
                 </Button>
               )}
@@ -71,7 +74,7 @@ Explore Products.`,
           <img
             src={hero}
             alt='Hero section image'
-            className='w-full rounded-md object-cover'
+            className='aspect-square w-full rounded-md object-cover'
           />
         </div>
       </div>

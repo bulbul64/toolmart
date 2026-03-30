@@ -1,10 +1,8 @@
-
-
+import Footer from '../components/footer';
 import { Hero } from '../components/Hero';
 import { Navbar } from '../components/Navbar';
 import MainSection from '../sections/MainSection';
-
-
+import GetStarted from '../sections/GetStarted';
 
 export default function MainLayout() {
   return (
@@ -18,9 +16,19 @@ export default function MainLayout() {
       <div className='container mx-auto px-2'>
         <Hero />
       </div>
-      <div className='bg-[#9016FA]'>
+      <div>
         <div className='container mx-auto px-2'>
           <MainSection />
+        </div>
+      </div>
+      <div className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-24 px-4 text-white'>
+        <div className='container mx-auto'>
+          <GetStarted />
+        </div>
+      </div>
+      <div className='bg-gray-900'>
+        <div className='container mx-auto'>
+          <Footer />
         </div>
       </div>
     </>

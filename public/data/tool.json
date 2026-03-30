@@ -1,0 +1,38 @@
+[
+  {
+    "id": "01",
+    "icon": "https://img.icons8.com/color/96/000000/add-user-male.png",
+    "title": "Create Account",
+    "description": "Sign up for free in seconds. No credit card required to get started."
+  },
+  {
+    "id": "02",
+    "icon": "https://img.icons8.com/fluency/96/000000/verified-account.png",
+    "title": "Verify Email",
+    "description": "Confirm your email address to secure your account and access all features."
+  },
+  {
+    "id": "03",
+    "icon": "https://img.icons8.com/color/96/000000/user-male-circle.png",
+    "title": "Complete Profile",
+    "description": "Fill in your profile details to get personalized recommendations and services."
+  },
+  {
+    "id": "04",
+    "icon": "https://img.icons8.com/color/96/000000/settings.png",
+    "title": "Set Preferences",
+    "description": "Choose your preferences to get a tailored experience."
+  },
+{
+  "id": "05",
+  "icon": "https://icons.iconarchive.com/icons/icons8/ios7/128/Finance-Credit-Card-icon.png",
+  "title": "Add Payment Method",
+  "description": "Securely add your preferred payment method for seamless transactions."
+},
+  {
+    "id": "06",
+    "icon": "https://img.icons8.com/color/96/000000/appointment-reminders.png",
+    "title": "Enable Notifications",
+    "description": "Stay updated by enabling notifications for important alerts and updates."
+  }
+]

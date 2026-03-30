@@ -1,105 +1,121 @@
 [
   {
+    "id": 1,
     "category": "Best Seller",
     "name": "A1 Writing Pro",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg",
     "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
-    "price": 29,
+    "price": { "amount": 29, "duration": "mo" },
     "features": ["Unlimited AI generations", "50+ writing templates", "Grammar checker"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 2,
     "category": "Popular",
     "name": "Automation Toolkit",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
     "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
-    "price": 79,
+    "price": { "amount": 79, "duration": "mo" },
     "features": ["Automations", "API access", "Custom workflows"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 3,
     "category": "Popular",
     "name": "Design Templates Pack",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     "description": "2000+ premium templates for social media, presentations, and marketing materials.",
-    "price": 49,
+    "price": { "amount": 49, "duration": "mo" },
     "features": ["One-time templates", "Monthly updates", "Commercial license"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 4,
     "category": "Popular",
     "name": "Resume Builder Pro",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     "description": "Create professional resumes and cover letters that land interviews.",
-    "price": 15,
+    "price": { "amount": 15, "duration": "mo" },
     "features": ["100+ templates", "ATS optimization", "Export to PDF"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 5,
     "category": "Best Seller",
     "name": "Video Editing Suite",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg",
     "description": "Professional video editing tools with templates, effects, and AI-assisted features.",
-    "price": 99,
+    "price": { "amount": 99, "duration": "mo" },
     "features": ["AI video generation", "100+ effects", "Export in 4K"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 6,
     "category": "Popular",
     "name": "Social Media Scheduler",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg",
     "description": "Schedule posts across multiple platforms and analyze engagement.",
-    "price": 39,
+    "price": { "amount": 39, "duration": "mo" },
     "features": ["Schedule posts", "Analytics dashboard", "Multiple platforms"],
     "buttonText": "Buy Now"
   },
   {
-    "category": "New Arrival",
-    "name": "Email Marketing Pro",
-    "description": "Design, send, and automate professional email campaigns.",
-    "price": 59,
-    "features": ["Email templates", "Automated sequences", "Open/click tracking"],
-    "buttonText": "Buy Now"
-  },
-  {
+    "id": 7,
     "category": "Best Seller",
     "name": "AI Chat Assistant",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     "description": "Integrate AI chatbots to assist customers and boost engagement.",
-    "price": 49,
+    "price": { "amount": 49, "duration": "mo" },
     "features": ["Custom AI responses", "Analytics", "Multi-platform support"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 8,
     "category": "Popular",
     "name": "Website Builder Pro",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "description": "Build stunning websites with drag-and-drop editor and templates.",
-    "price": 79,
+    "price": { "amount": 79, "duration": "mo" },
     "features": ["Drag & drop editor", "Responsive templates", "SEO optimized"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 9,
     "category": "New Arrival",
     "name": "Graphic Design Studio",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
     "description": "Create professional graphics, presentations, and marketing visuals.",
-    "price": 69,
+    "price": { "amount": 69, "duration": "mo" },
     "features": ["2000+ templates", "Vector tools", "Export in multiple formats"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 10,
     "category": "Best Seller",
     "name": "Project Management Tool",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
     "description": "Organize teams, tasks, and projects efficiently with collaborative tools.",
-    "price": 59,
+    "price": { "amount": 59, "duration": "mo" },
     "features": ["Task tracking", "Team collaboration", "Reports & dashboards"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 11,
     "category": "Popular",
     "name": "SEO Optimization Toolkit",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
     "description": "Analyze and improve website SEO for higher search rankings.",
-    "price": 45,
+    "price": { "amount": 45, "duration": "mo" },
     "features": ["Keyword research", "Site audit", "Rank tracking"],
     "buttonText": "Buy Now"
   },
   {
+    "id": 12,
     "category": "New Arrival",
     "name": "Content Planner Pro",
+    "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg",
     "description": "Plan and organize content strategy across blogs and social media.",
-    "price": 35,
+    "price": { "amount": 35, "duration": "mo" },
     "features": ["Content calendar", "Collaboration tools", "Analytics reports"],
     "buttonText": "Buy Now"
   }
