@@ -20,7 +20,7 @@ export default function MainLayout() {
       </div>
       <div className='bg-[#9016FA]'>
         <div className='container mx-auto px-2'>
-       
+          <MainSection />
         </div>
       </div>
     </>
