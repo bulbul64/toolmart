@@ -1,13 +1,12 @@
 import { cn } from '@/lib/utils';
 import { Button } from '../components/ui/button';
-import ProductCard from '../components/products/ProductCard';
+import ProductGrid from '../components/ProductGrid';
 import DataFetcher from '../api/api';
 import { Spinner } from '../components/ui/spinner';
-import { useState } from 'react';
+import Cart from '../components/products/cart';
 
-export default function ProductsSection() {
+export default function ProductsSection({ activeTab, setActiveTab }) {
   const { products, loading } = DataFetcher();
-  const [toggleBtn, setToggleBtn] = useState('products');
 
   if (loading) {
     return (
@@ -30,6 +29,7 @@ export default function ProductsSection() {
 
   return (
     <section className={cn('py-20 lg:py-24')}>
+      {/* Heading */}
       <div className='container mx-auto px-4 text-center'>
         <h2 className='text-3xl md:text-4xl font-extrabold mb-6'>{heading}</h2>
         <p className='text-lg w-2/3 mx-auto text-gray-600 mt-2'>{description}</p>
@@ -38,19 +38,19 @@ export default function ProductsSection() {
       {/* Toggle Buttons */}
       <div className='flex justify-center gap-6 mb-8 mt-6'>
         <Button
-          onClick={() => setToggleBtn('products')}
+          onClick={() => setActiveTab('products')}
           className={cn(
             'cursor-pointer py-2 px-6',
-            toggleBtn === 'products' ? 'bg-black text-white' : 'bg-white text-black',
+            activeTab === 'products' ? 'bg-black text-white' : 'bg-white text-black',
           )}
         >
           Products
         </Button>
         <Button
-          onClick={() => setToggleBtn('cart')}
+          onClick={() => setActiveTab('cart')}
           className={cn(
             'cursor-pointer py-2 px-6',
-            toggleBtn === 'cart' ? 'bg-black text-white' : 'bg-white text-black',
+            activeTab === 'cart' ? 'bg-black text-white' : 'bg-white text-black',
           )}
         >
           Cart <span>(2)</span>
@@ -58,15 +58,16 @@ export default function ProductsSection() {
       </div>
 
       {/* Product Grid */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            loading={loading}
-          />
-        ))}
-      </div>
+      {activeTab === 'cart' && (
+        <Cart />
+      )}
+
+      {activeTab === 'products' && (
+        <ProductGrid
+          products={products}
+          loading={loading}
+        />
+      )}
     </section>
   );
 }

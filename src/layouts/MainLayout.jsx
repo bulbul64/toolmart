@@ -3,6 +3,7 @@ import { Hero } from '../components/Hero';
 import { Navbar } from '../components/Navbar';
 import MainSection from '../sections/MainSection';
 import GetStarted from '../sections/GetStarted';
+import Cart from '../components/products/cart';
 
 export default function MainLayout() {
   return (
@@ -25,6 +26,7 @@ export default function MainLayout() {
         <div className='container mx-auto'>
           <GetStarted />
         </div>
+        
       </div>
       <div className='bg-gray-900'>
         <div className='container mx-auto'>
