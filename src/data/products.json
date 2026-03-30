@@ -1,0 +1,106 @@
+[
+  {
+    "category": "Best Seller",
+    "name": "A1 Writing Pro",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "price": 29,
+    "features": ["Unlimited AI generations", "50+ writing templates", "Grammar checker"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Popular",
+    "name": "Automation Toolkit",
+    "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
+    "price": 79,
+    "features": ["Automations", "API access", "Custom workflows"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Popular",
+    "name": "Design Templates Pack",
+    "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+    "price": 49,
+    "features": ["One-time templates", "Monthly updates", "Commercial license"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Popular",
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes and cover letters that land interviews.",
+    "price": 15,
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Best Seller",
+    "name": "Video Editing Suite",
+    "description": "Professional video editing tools with templates, effects, and AI-assisted features.",
+    "price": 99,
+    "features": ["AI video generation", "100+ effects", "Export in 4K"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Popular",
+    "name": "Social Media Scheduler",
+    "description": "Schedule posts across multiple platforms and analyze engagement.",
+    "price": 39,
+    "features": ["Schedule posts", "Analytics dashboard", "Multiple platforms"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "New Arrival",
+    "name": "Email Marketing Pro",
+    "description": "Design, send, and automate professional email campaigns.",
+    "price": 59,
+    "features": ["Email templates", "Automated sequences", "Open/click tracking"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Best Seller",
+    "name": "AI Chat Assistant",
+    "description": "Integrate AI chatbots to assist customers and boost engagement.",
+    "price": 49,
+    "features": ["Custom AI responses", "Analytics", "Multi-platform support"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Popular",
+    "name": "Website Builder Pro",
+    "description": "Build stunning websites with drag-and-drop editor and templates.",
+    "price": 79,
+    "features": ["Drag & drop editor", "Responsive templates", "SEO optimized"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "New Arrival",
+    "name": "Graphic Design Studio",
+    "description": "Create professional graphics, presentations, and marketing visuals.",
+    "price": 69,
+    "features": ["2000+ templates", "Vector tools", "Export in multiple formats"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Best Seller",
+    "name": "Project Management Tool",
+    "description": "Organize teams, tasks, and projects efficiently with collaborative tools.",
+    "price": 59,
+    "features": ["Task tracking", "Team collaboration", "Reports & dashboards"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "Popular",
+    "name": "SEO Optimization Toolkit",
+    "description": "Analyze and improve website SEO for higher search rankings.",
+    "price": 45,
+    "features": ["Keyword research", "Site audit", "Rank tracking"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "category": "New Arrival",
+    "name": "Content Planner Pro",
+    "description": "Plan and organize content strategy across blogs and social media.",
+    "price": 35,
+    "features": ["Content calendar", "Collaboration tools", "Analytics reports"],
+    "buttonText": "Buy Now"
+  }
+]

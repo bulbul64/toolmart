@@ -2,6 +2,7 @@
 
 import { Hero } from '../components/Hero';
 import { Navbar } from '../components/Navbar';
+import MainSection from '../sections/MainSection';
 
 
 
@@ -15,10 +16,13 @@ export default function MainLayout() {
       </div>
 
       <div className='container mx-auto px-2'>
-       
+        <Hero />
       </div>
-      {/* <MainSection /> */}
-      
+      <div className='bg-[#9016FA]'>
+        <div className='container mx-auto px-2'>
+       
+        </div>
+      </div>
     </>
   );
 }

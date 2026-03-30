@@ -1,6 +1,7 @@
 'use client';
 
-import { Book, Menu, Sunset, Trees, Zap } from 'lucide-react';
+import logoImage from '../assets/logo.jpg';
+import { Book, Menu, ShoppingCart, Sunset, Trees, Zap } from 'lucide-react';
 
 import {
   Accordion,
@@ -22,28 +23,24 @@ import { cn } from '@/lib/utils';
 
 const Navbar = ({
   logo = {
-    url: 'https://www.shadcnblocks.com',
-    src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg',
-    alt: 'logo',
     title: 'ToolMart',
   },
   menu = [
-    { title: 'Home', url: '#' },
+    { title: 'Products', url: '/products' },
     {
-      title: 'Products',
-      url: '#',
+      title: 'Features',
+      url: '/features',
     },
     {
-      title: 'Resources',
-      url: '#',
-     
+      title: 'Pricing',
+      url: '/pricing',
     },
-    { title: 'Pricing', url: '#' },
-    { title: 'Blog', url: '#' },
+    { title: 'Testimonials', url: '#' },
+    { title: 'FAQ', url: '#' },
   ],
   auth = {
     login: { title: 'Login', url: '#' },
-    signup: { title: 'Sign up', url: '#' },
+    signup: { title: 'Get Started', url: '#' },
   },
   className,
 }) => {
@@ -63,15 +60,18 @@ const Navbar = ({
                 className='max-h-8 dark:invert'
                 alt={logo.alt}
               />
-              <span className='text-lg font-semibold tracking-tighter'>{logo.title}</span>
+              <span className='text-lg   font-semibold  tracking-tighter'>
+                {logo.title}
+              </span>
             </a>
           </div>
-            <div className='flex  items-center'>
-              <NavigationMenu>
-                <NavigationMenuList>{menu.map((item) => renderMenuItem(item))}</NavigationMenuList>
-              </NavigationMenu>
-            </div>
-          <div className='flex gap-2'>
+          <div className='flex  items-center'>
+            <NavigationMenu>
+              <NavigationMenuList>{menu.map((item) => renderMenuItem(item))}</NavigationMenuList>
+            </NavigationMenu>
+          </div>
+          <div className='flex gap-3 items-center'>
+            <ShoppingCart className='size-4' />
             <Button
               asChild
               variant='outline'
@@ -79,6 +79,7 @@ const Navbar = ({
             >
               <a href={auth.login.url}>{auth.login.title}</a>
             </Button>
+
             <Button
               asChild
               size='sm'
@@ -134,6 +135,7 @@ const Navbar = ({
                   >
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
+
                   <div className='flex flex-col gap-3'>
                     <Button
                       asChild

@@ -1,10 +1,11 @@
+import Stats from "../components/Stats";
 
 
 
-// export default function MainSection() {
-//   return (
-//     <>
-//       <h1>Main Section</h1>
-//     </>
-//   );
-// }
+export default function MainSection() {
+  return (
+    <div className='container mx-auto px-2'>
+      <Stats />
+    </div>
+  );
+}
