@@ -1,12 +1,32 @@
-# React + Vite
+# 🚀 Project Name : Toolmart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive web application designed to deliver a smooth and engaging user experience. This project focuses on clean design, fast performance, and practical functionality that solves real-world problems.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Description
 
-## Expanding the ESLint configuration
+This project is built with a focus on simplicity and usability. It provides an intuitive interface and efficient performance, making it suitable for both beginners and advanced users. The goal is to create a scalable and maintainable application with a clean code structure.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+* HTML5
+* CSS3 / Tailwind CSS
+* JavaScript (ES6+)
+* React.js
+
+---
+
+## ✨ Features
+
+* ⚡ Fast and responsive design for all devices
+* 🛒 Dynamic functionality (e.g., add to cart / interactive UI)
+* 🎯 Clean and user-friendly interface
+
+---
+
+## 📌 Author
+
+Developed with dedication and passion ❤️

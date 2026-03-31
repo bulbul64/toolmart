@@ -29,7 +29,7 @@ export default function Started() {
    const description = 'Start using premium digital tools in minutes, not hours.';
 
   return (
-    <div>
+    <div className="mb-16">
       <div className='container mx-auto px-4 text-center'>
         <h2 className='text-3xl md:text-4xl font-extrabold mb-4 '>{heading}</h2>
         <p className='text-lg w-2/3 mx-auto text-gray-600'>{description}</p>

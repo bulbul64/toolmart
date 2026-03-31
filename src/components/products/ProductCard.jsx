@@ -1,3 +1,5 @@
+import { toast,  } from "react-toastify";
+
 export default function ProductCard({ product, cart, setCart }) {
 
   return (
@@ -54,11 +56,16 @@ export default function ProductCard({ product, cart, setCart }) {
             );
           })}
         </ul>
-
+     
         {/* buy now */}
         <div className='mt-6'>
           <button
-            onClick={() => setCart((previous) => [...previous, product])}
+            onClick={() => {
+              setCart((previous) => [...previous, product]);
+               toast.success('Product added to cart!');
+            }
+              
+            }
             className='w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition'
           >
             Buy Now

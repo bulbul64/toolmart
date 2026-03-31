@@ -47,10 +47,10 @@ const Navbar = ({ cart,
 
   const length = cart.length;
   return (
-    <section className={cn('py-4', className)}>
-      <div className='container'>
+    <section className={cn(' py-4 lg:py-6 ', className)}>
+      <div className='container '>
         {/* Desktop Menu */}
-        <nav className='hidden items-center justify-between lg:flex'>
+        <nav className='hidden items-center justify-between lg:flex '>
           <div className='flex  items-center gap-6'>
             {/* Logo */}
             <a

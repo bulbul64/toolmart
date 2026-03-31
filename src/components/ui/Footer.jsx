@@ -1,11 +1,9 @@
-import { Coffee } from 'lucide-react';
+import { FaFacebookF, FaTwitter, FaGithub, FaCoffee } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer className='bg-neutral text-gray-400 pt-20 pb-10'>
-      {/* Top Section */}
       <div className='max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10'>
-        {/* Brand */}
         <div className='md:col-span-2 space-y-4'>
           <h2 className='text-3xl font-bold text-white'>DigiTools</h2>
           <p className='text-sm leading-relaxed max-w-sm'>
@@ -14,14 +12,13 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Product */}
         <div>
           <h3 className='text-white font-semibold mb-4'>Product</h3>
           <ul className='space-y-2 text-sm'>
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Features
               </a>
@@ -29,7 +26,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Pricing
               </a>
@@ -37,7 +34,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Templates
               </a>
@@ -45,7 +42,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Integrations
               </a>
@@ -53,14 +50,13 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Company */}
         <div>
           <h3 className='text-white font-semibold mb-4'>Company</h3>
           <ul className='space-y-2 text-sm'>
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 About
               </a>
@@ -68,7 +64,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Blog
               </a>
@@ -76,7 +72,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Careers
               </a>
@@ -84,7 +80,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Press
               </a>
@@ -92,14 +88,13 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Resources */}
         <div>
           <h3 className='text-white font-semibold mb-4'>Resources</h3>
           <ul className='space-y-2 text-sm'>
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Documentation
               </a>
@@ -107,7 +102,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Help Center
               </a>
@@ -115,7 +110,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Community
               </a>
@@ -123,7 +118,7 @@ export default function Footer() {
             <li>
               <a
                 href='#'
-                className='hover:text-white'
+                className='hover:text-white transition'
               >
                 Contact
               </a>
@@ -132,47 +127,61 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Divider */}
       <div className='max-w-6xl mx-auto px-4 mt-12'>
         <div className='h-px bg-gray-700'></div>
       </div>
 
-      {/* Bottom Section */}
       <div className='max-w-6xl mx-auto px-4 mt-6 flex flex-col md:flex-row justify-between items-center gap-4'>
-        {/* Copyright */}
         <p className='text-sm text-center md:text-left'>
           © {new Date().getFullYear()} DigiTools. All rights reserved.
         </p>
 
-        {/* Links */}
         <div className='flex gap-6 text-sm'>
           <a
             href='#'
-            className='hover:text-white'
+            className='hover:text-white transition'
           >
             Terms
           </a>
           <a
             href='#'
-            className='hover:text-white'
+            className='hover:text-white transition'
           >
             Privacy
           </a>
           <a
             href='#'
-            className='hover:text-white'
+            className='hover:text-white transition'
           >
             Cookies
           </a>
         </div>
 
-        {/* Social Icons (Lucide) */}
+        {/* Social Icons */}
         <div className='flex gap-4'>
           <a
             href='#'
-            className='hover:text-white'
+            className='p-2 rounded-full hover:bg-gray-800 hover:text-white transition'
           >
-            <Coffee size={18} />
+            <FaFacebookF size={16} />
+          </a>
+          <a
+            href='#'
+            className='p-2 rounded-full hover:bg-gray-800 hover:text-white transition'
+          >
+            <FaTwitter size={16} />
+          </a>
+          <a
+            href='#'
+            className='p-2 rounded-full hover:bg-gray-800 hover:text-white transition'
+          >
+            <FaGithub size={16} />
+          </a>
+          <a
+            href='#'
+            className='p-2 rounded-full hover:bg-gray-800 hover:text-white transition'
+          >
+            <FaCoffee size={16} />
           </a>
         </div>
       </div>
