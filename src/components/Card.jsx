@@ -2,7 +2,7 @@
 
 export default function Card({ tool }) {
 
-  console.log(tool)
+  // console.log(tool)
   return (
     <div className='relative w-64 p-6 py-12 bg-white rounded-xl shadow-md text-center'>
       {/* number */}

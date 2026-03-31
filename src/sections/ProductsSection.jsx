@@ -5,8 +5,10 @@ import DataFetcher from '../api/api';
 import { Spinner } from '../components/ui/spinner';
 import Cart from '../components/products/cart';
 
-export default function ProductsSection({ activeTab, setActiveTab }) {
+export default function ProductsSection({ activeTab, setActiveTab , cart, setCart}) {
   const { products, loading } = DataFetcher();
+
+  const length = cart.length;
 
   if (loading) {
     return (
@@ -53,17 +55,17 @@ export default function ProductsSection({ activeTab, setActiveTab }) {
             activeTab === 'cart' ? 'bg-black text-white' : 'bg-white text-black',
           )}
         >
-          Cart <span>(2)</span>
+          Cart <span>({length})</span>
         </Button>
       </div>
 
       {/* Product Grid */}
-      {activeTab === 'cart' && (
-        <Cart />
-      )}
+      {activeTab === 'cart' && <Cart cart={cart} setCart={setCart} />}
 
       {activeTab === 'products' && (
         <ProductGrid
+          setCart={setCart}
+          cart={cart}
           products={products}
           loading={loading}
         />

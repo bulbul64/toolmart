@@ -1,4 +1,4 @@
-export default function ProductCard({ product, }) {
+export default function ProductCard({ product, cart, setCart }) {
 
   return (
     <div className='p-4 bg-white shadow-md rounded-lg overflow-hidden border border-gray-200'>
@@ -21,9 +21,9 @@ export default function ProductCard({ product, }) {
         <div className='flex justify-between items-center'>
           <h2 className='text-2xl font-bold'>{product.name}</h2>
         </div>
-          <span className='text-xl font-semibold mt-2'>
-            ${product.price.amount}/{product.price.duration}
-          </span>
+        <span className='text-xl font-semibold mt-2'>
+          ${product.price.amount}/{product.price.duration}
+        </span>
 
         {/*  description */}
         <p className='text-gray-600 mt-3'>{product.description}.</p>
@@ -57,7 +57,10 @@ export default function ProductCard({ product, }) {
 
         {/* buy now */}
         <div className='mt-6'>
-          <button className='w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition'>
+          <button
+            onClick={() => setCart((previous) => [...previous, product])}
+            className='w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition'
+          >
             Buy Now
           </button>
         </div>

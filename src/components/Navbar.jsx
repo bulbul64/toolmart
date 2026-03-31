@@ -21,7 +21,7 @@ import {
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
-const Navbar = ({
+const Navbar = ({ cart,
   logo = {
     title: 'ToolMart',
   },
@@ -44,6 +44,8 @@ const Navbar = ({
   },
   className,
 }) => {
+
+  const length = cart.length;
   return (
     <section className={cn('py-4', className)}>
       <div className='container'>
@@ -60,9 +62,7 @@ const Navbar = ({
                 className='max-h-8 dark:invert'
                 alt={logo.alt}
               />
-              <span className='text-lg   font-semibold  tracking-tighter'>
-                {logo.title}
-              </span>
+              <span className='text-lg   font-semibold  tracking-tighter'>{logo.title}</span>
             </a>
           </div>
           <div className='flex  items-center'>
@@ -71,7 +71,13 @@ const Navbar = ({
             </NavigationMenu>
           </div>
           <div className='flex gap-3 items-center'>
-            <ShoppingCart className='size-4' />
+            <div className='relative'>
+              <ShoppingCart className='size-4 ' />
+              <span className='text-xs absolute -top-5 -right-4 font-semibold px-2 py-1 rounded bg-yellow-100 text-yellow-700'>
+                {length}
+              </span>
+            </div>
+
             <Button
               asChild
               variant='outline'
