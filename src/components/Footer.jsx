@@ -1,7 +1,6 @@
-import React from 'react';
-import { Coffee } from 'lucide-react'; // Lucide থেকে যেকোনো আইকন
+import { Coffee } from 'lucide-react';
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className='bg-neutral text-gray-400 pt-20 pb-10'>
       {/* Top Section */}
@@ -179,6 +178,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

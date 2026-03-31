@@ -1,10 +1,12 @@
-import Footer from '../components/footer';
+
 import { Hero } from '../components/Hero';
 import { Navbar } from '../components/Navbar';
 import MainSection from '../sections/MainSection';
 import GetStarted from '../sections/GetStarted';
 import Cart from '../components/products/cart';
 import { useState } from 'react';
+import Footer from '../components/Footer';
+
 
 export default function MainLayout() {
     const [cart, setCart] = useState([]);
