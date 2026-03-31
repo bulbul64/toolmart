@@ -24,7 +24,7 @@ Explore Products.`,
   className,
 }) => {
   return (
-    <section className={cn('py-32 lg:py-40', className)}>
+    <section className={cn('py-32 lg:py-39', className)}>
       <div className='container'>
         <div className='grid items-center gap-8 lg:grid-cols-2 lg:gap-12'>
           {/* Left Content */}
