@@ -6,6 +6,15 @@ export default function ProductCard({ product, cart, setCart }) {
     hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
+   const isFound = cart.find((item) => item.id === product.id);
+  const handleAddToCart = () => {
+    if (isFound) {
+      toast.error('Product already added to cart');
+    } else {
+      setCart((prev) => [...prev, product]);
+      toast.success('Product added to cart');
+    }
+  };
 
   return (
     <motion.div
@@ -67,10 +76,7 @@ export default function ProductCard({ product, cart, setCart }) {
 
         <div className='mt-6'>
           <button
-            onClick={() => {
-              setCart((previous) => [...previous, product]);
-              toast.success('Product added to cart!');
-            }}
+            onClick={handleAddToCart}
             className='w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition'
           >
             Buy Now
