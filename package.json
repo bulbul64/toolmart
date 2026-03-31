@@ -16,6 +16,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fetch-blob": "^4.0.0",
+    "framer-motion": "^12.38.0",
     "lucide-react": "^1.7.0",
     "node-fetch": "^3.3.2",
     "path-browserify": "^1.0.1",

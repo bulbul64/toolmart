@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className='bg-neutral text-gray-400 pt-20 pb-10'>
       <div className='max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10'>
         <div className='md:col-span-2 space-y-4'>
-          <h2 className='text-3xl font-bold text-white'>DigiTools</h2>
+          <h2 className='text-3xl font-bold text-white'>ToolMart</h2>
           <p className='text-sm leading-relaxed max-w-sm'>
             Premium digital tools for creators, professionals, and businesses. Work smarter with our
             suite of powerful tools.

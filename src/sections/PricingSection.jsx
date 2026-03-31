@@ -1,4 +1,5 @@
 import { toast } from 'react-toastify';
+import { motion } from 'framer-motion';
 
 export default function PricingSection({ cart, setCart }) {
   const plans = [
@@ -28,96 +29,103 @@ export default function PricingSection({ cart, setCart }) {
     },
   ];
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  };
+
   return (
-    <section className='py-16 '>
-      <div className='container mx-auto px-4'>
-        {/* Header */}
-        <div className='text-center mb-10'>
-          <h2 className='text-3xl font-bold'>Simple, Transparent Pricing</h2>
-          <p className='text-gray-600 mt-2'>
-            Choose the plan that fits your needs. Upgrade anytime.
-          </p>
-        </div>
+    <motion.section
+      className='py-16'
+      variants={container}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <motion.div
+        className='container mx-auto px-4 text-center'
+        variants={item}
+      >
+        <h2 className='text-3xl font-bold'>Simple, Transparent Pricing</h2>
+        <p className='text-gray-600 mt-2'>Choose the plan that fits your needs. Upgrade anytime.</p>
+      </motion.div>
 
-        {/* Cards */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          {plans.map((plan, index) => {
-            const isSelected = plan.isPopular;
-
-            return (
-              <div
-                key={index}
-                className={`p-6 rounded-lg bg-white border transition relative
+      <motion.div
+        className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 px-4'
+        variants={container}
+      >
+        {plans.map((plan, index) => {
+          const isSelected = plan.isPopular;
+          return (
+            <motion.div
+              key={index}
+              className={`p-6 rounded-lg bg-white border transition relative
                 ${isSelected ? 'border-blue-600 shadow-xl scale-105' : 'border-gray-200'}`}
-              >
-                {/* Popular Badge */}
-                {plan.isPopular && (
-                  <span className='absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs px-3 py-1 rounded-full'>
-                    Most Popular
-                  </span>
-                )}
+              variants={item}
+            >
+              {plan.isPopular && (
+                <span className='absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs px-3 py-1 rounded-full'>
+                  Most Popular
+                </span>
+              )}
 
-                <div className='flex flex-col'>
-                  {/* Title */}
-                  <h2 className='text-2xl font-bold'>{plan.name}</h2>
+              <div className='flex flex-col'>
+                <h2 className='text-2xl font-bold'>{plan.name}</h2>
+                <span className='text-xl font-semibold mt-2'>
+                  {plan.price.amount === 0 ? '$0' : `$${plan.price.amount}`}/{plan.price.duration}
+                </span>
+                <p className='text-gray-600 mt-3'>{plan.description}</p>
 
-                  {/* Price */}
-                  <span className='text-xl font-semibold mt-2'>
-                    {plan.price.amount === 0 ? '$0' : `$${plan.price.amount}`}/{plan.price.duration}
-                  </span>
-
-                  {/* Description */}
-                  <p className='text-gray-600 mt-3'>{plan.description}</p>
-
-                  {/* Features */}
-                  <ul className='mt-4 flex flex-col gap-2 text-sm'>
-                    {plan.features.map((feature, i) => (
-                      <li
-                        key={i}
-                        className='flex items-center'
-                      >
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          className='w-4 h-4 mr-2 text-green-500 shrink-0'
-                          fill='none'
-                          viewBox='0 0 24 24'
-                          stroke='currentColor'
-                        >
-                          <path
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                            strokeWidth={2}
-                            d='M5 13l4 4L19 7'
-                          />
-                        </svg>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Button */}
-                  <div className='mt-6'>
-                    <button
-                      onClick={() => {
-                        setCart((prev) => [...prev, plan]);
-                        toast.success(`${plan.name} added!`);
-                      }}
-                      className={`w-full py-2 rounded text-white transition
-                        ${
-                          isSelected
-                            ? 'bg-blue-600 hover:bg-blue-700'
-                            : 'bg-gray-800 hover:bg-gray-900'
-                        }`}
+                <ul className='mt-4 flex flex-col gap-2 text-sm'>
+                  {plan.features.map((feature, i) => (
+                    <li
+                      key={i}
+                      className='flex items-center'
                     >
-                      {plan.buttonText}
-                    </button>
-                  </div>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        className='w-4 h-4 mr-2 text-green-500 shrink-0'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth={2}
+                          d='M5 13l4 4L19 7'
+                        />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className='mt-6'>
+                  <button
+                    onClick={() => {
+                      setCart((prev) => [...prev, plan]);
+                      toast.success(`${plan.name} added!`);
+                    }}
+                    className={`w-full py-2 rounded text-white transition
+                      ${isSelected ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-800 hover:bg-gray-900'}`}
+                  >
+                    {plan.buttonText}
+                  </button>
                 </div>
               </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+    </motion.section>
   );
 }
