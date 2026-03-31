@@ -5,7 +5,8 @@ import MainSection from '../sections/MainSection';
 import GetStarted from '../sections/GetStarted';
 import Cart from '../components/products/cart';
 import { useState } from 'react';
-import Footer from '../components/Footer';
+import Footer from '../components/ui/Footer';
+
 
 
 export default function MainLayout() {
