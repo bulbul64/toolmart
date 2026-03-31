@@ -1,5 +1,5 @@
 import { useFetchData } from "../api/api";
-import Card from "../components/card";
+import Card from "../components/Card";
 import { Button } from "../components/ui/button";
 import { Spinner } from "../components/ui/spinner";
 
