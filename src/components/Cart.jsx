@@ -1,8 +1,7 @@
 import { cn } from '@/lib/utils';
-import { Button } from '../ui/button';
+import { Button } from './ui/button';
 
 export default function Cart({ cart, setCart }) {
-
   const total = cart.reduce((acc, item) => acc + item.price.amount, 0);
   const length = cart.length;
   if (length === 0) return <p className='text-center text-2xl'>Your cart is empty</p>;
@@ -21,7 +20,10 @@ export default function Cart({ cart, setCart }) {
               <div className='flex items-center gap-4 w-full sm:w-auto'>
                 <div className='w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center'>
                   {/* Image Placeholder */}
-                  <img src={item.image} alt="" />
+                  <img
+                    src={item.image}
+                    alt=''
+                  />
                 </div>
                 <div>
                   <h4 className='font-semibold text-lg md:text-xl'>{item.name}</h4>
@@ -49,7 +51,8 @@ export default function Cart({ cart, setCart }) {
           {/* Checkout Button */}
           <Button
             onClick={() => setCart([])}
-            className='mt-6 w-full py-4 font-semibold text-lg bg-black text-white hover:bg-gray-900 transition-colors duration-300'>
+            className='mt-6 w-full py-4 font-semibold text-lg bg-black text-white hover:bg-gray-900 transition-colors duration-300'
+          >
             Proceed to Checkout
           </Button>
         </div>

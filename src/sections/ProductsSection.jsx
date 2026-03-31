@@ -3,9 +3,9 @@ import { Button } from '../components/ui/button';
 import ProductGrid from '../components/ProductGrid';
 import DataFetcher from '../api/api';
 import { Spinner } from '../components/ui/spinner';
-import Cart from '../components/products/Cart';
+import Cart from '../components/Cart';
 
-export default function ProductsSection({ activeTab, setActiveTab , cart, setCart}) {
+export default function ProductsSection({ activeTab, setActiveTab, cart, setCart }) {
   const { products, loading } = DataFetcher();
 
   const length = cart.length;
@@ -60,7 +60,12 @@ export default function ProductsSection({ activeTab, setActiveTab , cart, setCar
       </div>
 
       {/* Product Grid */}
-      {activeTab === 'cart' && <Cart cart={cart} setCart={setCart} />}
+      {activeTab === 'cart' && (
+        <Cart
+          cart={cart}
+          setCart={setCart}
+        />
+      )}
 
       {activeTab === 'products' && (
         <ProductGrid
