@@ -1,32 +1,54 @@
-# 🚀 Project Name : Toolmart
+# Toolmart - Modern Web Application
 
-A modern and responsive web application designed to deliver a smooth and engaging user experience. This project focuses on clean design, fast performance, and practical functionality that solves real-world problems.
+This is **Toolmart**, a modern and responsive web application built with **React.js**, **JavaScript**, **HTML5**, **CSS3 / Tailwind CSS**.  
+It focuses on **clean design, fast performance, and practical functionality**.
 
----
-
-## 📖 Description
-
-This project is built with a focus on simplicity and usability. It provides an intuitive interface and efficient performance, making it suitable for both beginners and advanced users. The goal is to create a scalable and maintainable application with a clean code structure.
+🔗 Live Site: [Toolmart](https://toolmart-mauve.vercel.app/)
 
 ---
 
-## 🛠️ Technologies Used
-
-* HTML5
-* CSS3 / Tailwind CSS
-* JavaScript (ES6+)
-* React.js
-
----
-
-## ✨ Features
-
-* ⚡ Fast and responsive design for all devices
-* 🛒 Dynamic functionality (e.g., add to cart / interactive UI)
-* 🎯 Clean and user-friendly interface
+## 🖥 Features
+- ⚡ Fast and responsive design for all devices  
+- 🛒 Dynamic functionality (e.g., add to cart / interactive UI)  
+- 🎯 Clean and user-friendly interface  
+- 🧰 Built with scalability and maintainability in mind
 
 ---
 
-## 📌 Author
+## 🧠 Tech Stack
+- **React.js**  
+- **JavaScript (ES6+)**  
+- **HTML5**  
+- **CSS3 / Tailwind CSS**  
 
-Developed with dedication and passion ❤️
+---
+
+## 📦 Dependencies
+- `react`  
+- `react-dom`  
+- `tailwindcss`  
+- `postcss`  
+- `autoprefixer`  
+
+*(Adjust dependencies according to your package.json)*
+
+---
+
+## 🚀 How to Run Locally
+To run this project on your local machine, follow these steps:
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/bulbul64/toolmart.git
+
+# 2️⃣ Navigate to project folder
+cd toolmart
+
+# 3️⃣ Install all dependencies
+npm install
+
+# 4️⃣ Start the development server
+npm run dev
+
+# 5️⃣ Open in browser
+# Visit: http://localhost:5173
